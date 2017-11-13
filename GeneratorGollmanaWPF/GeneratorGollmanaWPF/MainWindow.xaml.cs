@@ -25,6 +25,19 @@ namespace GeneratorGollmanaWPF
         private int[] rej;
         private int o1, o2, o3;
         Random rnd = new Random();
+        public LFSR(String text)
+        {
+            rej = new int[text.Length];
+            for (int i = 0; i < text.Length; i++)
+            {
+                rej[i] = Convert.ToInt16(text[i]-48);
+            }
+            o1 = rnd.Next(0, text.Length - 1);
+            o2 = rnd.Next(0, text.Length - 1);
+            o3 = rnd.Next(0, text.Length - 1);
+            while (o2 == o1) { o2 = rnd.Next(0, text.Length - 1); }
+            while (o3 == o1 || o3 == o2) { o3 = rnd.Next(0, text.Length - 1); }
+        }
         public LFSR(int m)
         {
             rej = new int[m];
@@ -204,7 +217,7 @@ namespace GeneratorGollmanaWPF
                 {
                     key = key + cascade(registers);
                 }
-                //PrintKeyTextBox.Text = key;
+                PrintKeyTextBox.Text = key;
 
             }
         }
@@ -239,6 +252,43 @@ namespace GeneratorGollmanaWPF
                 }
                 PrintKeyTextBox.Text = key;
             }
+        }
+
+        private void AddLFSRButton_Click(object sender, RoutedEventArgs e)
+        {
+            List<LFSR> lista = null;
+            if (registers == null)
+            {
+                lista = new List<LFSR>();
+                lista.Add(new LFSR(AddLFSRTextBox.Text));
+            }
+            else
+            {
+                lista = registers.ToList();
+
+                lista.Add(new LFSR(AddLFSRTextBox.Text));
+            }
+
+            registers = lista.ToArray();
+            
+            String rejestry_do_wyswietlenia = "";
+            for (int i = 0; i < registers.Length; i++)
+            {
+                rejestry_do_wyswietlenia = rejestry_do_wyswietlenia + "LFSR-" + (i + 1) + " : ";
+                for (int j = 0; j < registers[i].get_rejestr().Length; j++)
+                    rejestry_do_wyswietlenia = rejestry_do_wyswietlenia + registers[i].get_rejestr()[j];
+                rejestry_do_wyswietlenia = rejestry_do_wyswietlenia + " Odczepy: " + (registers[i].geto1() + 1) + ", " + (registers[i].geto2() + 1) + ", " + (registers[i].geto3() + 1) + ", " + "\n";
+
+            }
+            PrintLFSRTextBox.Text = rejestry_do_wyswietlenia;
+        }
+
+        private void ResetLFSRButton_Click(object sender, RoutedEventArgs e)
+        {
+            registers = null;
+            String rejestry_do_wyswietlenia = "";
+            
+            PrintLFSRTextBox.Text = rejestry_do_wyswietlenia;
         }
     }
 }
