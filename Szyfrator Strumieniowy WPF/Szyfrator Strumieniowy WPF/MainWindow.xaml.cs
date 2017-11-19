@@ -195,7 +195,7 @@ namespace Szyfrator_Strumieniowy_WPF
         private void LoadTextButton_Click(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
-            dlg.InitialDirectory = "C:\\Users\\Osa\\Source\\Repos\\POD\\Szyfrator Strumieniowy\\Szyfrator Strumieniowy\\bin\\Debug";
+            dlg.InitialDirectory = "C:\\Users";
             dlg.DefaultExt = "*.txt";
             Nullable<bool> result = dlg.ShowDialog();
             if (result == true)
@@ -233,7 +233,7 @@ namespace Szyfrator_Strumieniowy_WPF
         {
             
             Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
-            dlg.InitialDirectory = "C:\\Users\\Osa\\Source\\Repos\\POD\\Szyfrator Strumieniowy\\Szyfrator Strumieniowy\\bin\\Debug";
+            dlg.InitialDirectory = "C:\\Users";
             dlg.DefaultExt = "*.txt";
             Nullable<bool> result = dlg.ShowDialog();
             if (result == true)
