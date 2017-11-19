@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Szyfrator_Strumieniowy_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800">
+        Title="Szyfrator strumieniowy" Height="600" Width="800">
     <Grid>
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="569" VerticalAlignment="Top" Width="792">
             <TabItem Header="Klucz" Background="White">
@@ -19,7 +19,7 @@
             </TabItem>
 
             <TabItem Header="Szyfrator" Background="White">
-                <Grid Background="White" Opacity="0.995">
+                <Grid Background="#FFF8FCFF" Opacity="0.995">
                     <TextBox x:Name="TextBox" HorizontalAlignment="Left" Height="473" Margin="10,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="365"/>
                     <Label x:Name="label1" Content="Tekst do zaszyfrowania" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top"/>
                     <Button x:Name="LoadTextButton" Content="Wczytaj plik" HorizontalAlignment="Left" Margin="10,511,0,0" VerticalAlignment="Top" Width="75" Click="LoadTextButton_Click"/>
@@ -29,7 +29,7 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Deszyfruj" Background="White">
-                <Grid Background="White" Opacity="0.995">
+                <Grid Background="#FFFAFFF3" Opacity="0.995">
                     <TextBox x:Name="EncryptedTextBox_Copy" HorizontalAlignment="Left" Height="473" Margin="10,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="365"/>
                     <Label x:Name="label3" Content="Zaszyfrownay tekst" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top"/>
                     <Button x:Name="DecryptButton" Content="Zdeszyfruj tekst" HorizontalAlignment="Left" Margin="267,511,0,0" VerticalAlignment="Top" Width="106" Click="DecryptButton_Click"/>
@@ -39,7 +39,10 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Pomoc" Background="White">
-                <Grid Background="White"/>
+                <Grid Background="White">
+                    <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="495" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="766" IsEnabled="False" Text="Program ma za zadanie przyjmować klucz strumieniowy i na jego podstawie szyfrować tekst.&#xA;&#xA;Wynikiem jest tekst, który jest wynikiem operacji XOR pojedynczych znakach tekstu. Zakres znaków został zmniejszony do 64, ponieważ każda litera jest zamieniana na zapis binarny o zakresie 6 (2^6 = 64). Większy zakres powoduje, że uwzględniane są znaki z tablicy ASCII, których się nie używa (np. ACK, EOF, NAK itd.). Szyfrowanie polega podstawieniu do opreacji XOR każdego kolejnego znaku z tekstu, oraz klucza.&#xD;&#xA;Deszyfrowanie odbywa się w podstawiając do wejścia XOR binarny zaszyfrowany tekst i klucz.&#xA;&#xA;Szyfrator i deszyfrator obługują następujące znaki:&#xD;&#xA;A-Z, a-z, spacja, ',', '.', '?', '!', '(', ')', ':', '+', '-', '/', '*'&#xD;&#xA;&#xD;&#xA;Program pozwala na wczytywanie tekstu do zaszyfrowania i odszyfrowania z pliku.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;"/>
+                    <Label x:Name="label5" Content="Autor: Emilian Ossowski" HorizontalAlignment="Left" Margin="640,510,0,0" VerticalAlignment="Top"/>
+                </Grid>
             </TabItem>
         </TabControl>
 
