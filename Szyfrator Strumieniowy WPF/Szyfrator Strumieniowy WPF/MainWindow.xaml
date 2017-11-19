@@ -5,8 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Szyfrator_Strumieniowy_WPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="600" Width="800">
     <Grid>
-        
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="569" VerticalAlignment="Top" Width="792">
+            <TabItem Header="Klucz" Background="White">
+                <Grid Background="White">
+                    <Grid Margin="10,10,689,506">
+                        <Button x:Name="readKeyButton" Content="Wczytaj klucz" HorizontalAlignment="Left" VerticalAlignment="Top" Width="87" Height="25" Foreground="Black" Background="White" Click="readKeyButton_Click"/>
+                    </Grid>
+                    <TextBox x:Name="PrintKeyTextBox" HorizontalAlignment="Left" Height="461" Margin="10,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="766" IsEnabled="False"/>
+                    <Label x:Name="label" Content="Wczytany klucz" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Szyfrator" Background="White">
+                <Grid Background="White" Opacity="0.995">
+                    <TextBox x:Name="TextBox" HorizontalAlignment="Left" Height="473" Margin="10,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="365"/>
+                    <Label x:Name="label1" Content="Tekst do zaszyfrowania" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="LoadTextButton" Content="Wczytaj plik" HorizontalAlignment="Left" Margin="10,511,0,0" VerticalAlignment="Top" Width="75" Click="LoadTextButton_Click"/>
+                    <Button x:Name="EncryptTextButton" Content="Zaszyfruj tekst" HorizontalAlignment="Left" Margin="269,511,0,0" VerticalAlignment="Top" Width="106" Click="EncryptTextButton_Click"/>
+                    <TextBox x:Name="EncryptedTextBox" HorizontalAlignment="Left" Height="473" Margin="411,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="365"/>
+                    <Label x:Name="label2" Content="Zaszyfrowany tekst" HorizontalAlignment="Left" Margin="411,7,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Deszyfruj" Background="White">
+                <Grid Background="White" Opacity="0.995">
+                    <TextBox x:Name="EncryptedTextBox_Copy" HorizontalAlignment="Left" Height="473" Margin="10,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="365"/>
+                    <Label x:Name="label3" Content="Zaszyfrownay tekst" HorizontalAlignment="Left" Margin="10,7,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="DecryptButton" Content="Zdeszyfruj tekst" HorizontalAlignment="Left" Margin="267,511,0,0" VerticalAlignment="Top" Width="106" Click="DecryptButton_Click"/>
+                    <TextBox x:Name="DecryptedTextBox" HorizontalAlignment="Left" Height="473" Margin="411,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="365"/>
+                    <Label x:Name="label4" Content="Zdeszyfrowany tekst" HorizontalAlignment="Left" Margin="411,7,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="LoadFileButton" Content="Wczytaj plik" HorizontalAlignment="Left" Margin="10,511,0,0" VerticalAlignment="Top" Width="75" Click="LoadFileButton_Click"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Pomoc" Background="White">
+                <Grid Background="White"/>
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Window>
