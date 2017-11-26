@@ -1,0 +1,32 @@
+﻿<Window x:Class="FIPS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FIPS"
+        mc:Ignorable="d"
+        Title="FIPS" Height="600" Width="800">
+    <Grid>
+        <Button x:Name="LoadFileButton" Content="Wczytaj plik" HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top" Width="110" Click="LoadFileButton_Click"/>
+        <TextBox x:Name="KeyTextBox" HorizontalAlignment="Left" Height="222" Margin="10,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="772" IsEnabled="False"/>
+        <Label x:Name="label" Content="Wybierz plik dla którego chcesz przeprowadzić testy (min. 20 000 znaków)" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Wczytany klucz" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="OneBitTestButton" Content="Wykonaj" HorizontalAlignment="Left" Margin="10,330,0,0" VerticalAlignment="Top" Width="74" Click="OneBitTestButton_Click"/>
+        <Label x:Name="label2" Content="Test pojedyńczych bitów" HorizontalAlignment="Left" Margin="10,304,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="OneBitTestTextBox" HorizontalAlignment="Left" Height="23" Margin="172,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label x:Name="label3" Content="Wynik" HorizontalAlignment="Left" Margin="172,304,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="SerieTestButton" Content="Wykonaj" HorizontalAlignment="Left" Margin="10,373,0,0" VerticalAlignment="Top" Width="75" Click="SerieTestButton_Click"/>
+        <Label x:Name="label2_Copy" Content="Test serii" HorizontalAlignment="Left" Margin="10,347,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3_Copy" Content="Wynik" HorizontalAlignment="Left" Margin="172,347,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="SerieTestTextBox" HorizontalAlignment="Left" Height="23" Margin="172,370,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label x:Name="label2_Copy1" Content="Test długiej serii" HorizontalAlignment="Left" Margin="10,393,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="LongSerieButton" Content="Wykonaj" HorizontalAlignment="Left" Margin="10,419,0,0" VerticalAlignment="Top" Width="75" Click="LongSerieButton_Click"/>
+        <Label x:Name="label3_Copy1" Content="Wynik" HorizontalAlignment="Left" Margin="172,393,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="LongSerieTestTextBox" HorizontalAlignment="Left" Height="23" Margin="172,416,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label x:Name="label2_Copy2" Content="Test pokerowy" HorizontalAlignment="Left" Margin="10,439,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="PokerTestButton" Content="Wykonaj" HorizontalAlignment="Left" Margin="10,465,0,0" VerticalAlignment="Top" Width="75" Click="PokerTestButton_Click"/>
+        <Label x:Name="label3_Copy2" Content="Wynik" HorizontalAlignment="Left" Margin="172,439,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="PokerTestTextBox" HorizontalAlignment="Left" Height="23" Margin="172,462,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+
+    </Grid>
+</Window>
