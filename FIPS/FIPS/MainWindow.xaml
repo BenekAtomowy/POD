@@ -7,26 +7,38 @@
         mc:Ignorable="d"
         Title="FIPS" Height="600" Width="800">
     <Grid>
-        <Button x:Name="LoadFileButton" Content="Wczytaj plik" HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top" Width="110" Click="LoadFileButton_Click"/>
-        <TextBox x:Name="KeyTextBox" HorizontalAlignment="Left" Height="222" Margin="10,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="772" IsEnabled="False"/>
-        <Label x:Name="label" Content="Wybierz plik dla którego chcesz przeprowadzić testy (min. 20 000 znaków)" HorizontalAlignment="Left" Margin="10,2,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label1" Content="Wczytany klucz" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="OneBitTestButton" Content="Wykonaj" HorizontalAlignment="Left" Margin="10,330,0,0" VerticalAlignment="Top" Width="74" Click="OneBitTestButton_Click"/>
-        <Label x:Name="label2" Content="Test pojedyńczych bitów" HorizontalAlignment="Left" Margin="10,304,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="OneBitTestTextBox" HorizontalAlignment="Left" Height="23" Margin="172,327,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-        <Label x:Name="label3" Content="Wynik" HorizontalAlignment="Left" Margin="172,304,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="SerieTestButton" Content="Wykonaj" HorizontalAlignment="Left" Margin="10,373,0,0" VerticalAlignment="Top" Width="75" Click="SerieTestButton_Click"/>
-        <Label x:Name="label2_Copy" Content="Test serii" HorizontalAlignment="Left" Margin="10,347,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="label3_Copy" Content="Wynik" HorizontalAlignment="Left" Margin="172,347,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="SerieTestTextBox" HorizontalAlignment="Left" Height="23" Margin="172,370,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-        <Label x:Name="label2_Copy1" Content="Test długiej serii" HorizontalAlignment="Left" Margin="10,393,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="LongSerieButton" Content="Wykonaj" HorizontalAlignment="Left" Margin="10,419,0,0" VerticalAlignment="Top" Width="75" Click="LongSerieButton_Click"/>
-        <Label x:Name="label3_Copy1" Content="Wynik" HorizontalAlignment="Left" Margin="172,393,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="LongSerieTestTextBox" HorizontalAlignment="Left" Height="23" Margin="172,416,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
-        <Label x:Name="label2_Copy2" Content="Test pokerowy" HorizontalAlignment="Left" Margin="10,439,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="PokerTestButton" Content="Wykonaj" HorizontalAlignment="Left" Margin="10,465,0,0" VerticalAlignment="Top" Width="75" Click="PokerTestButton_Click"/>
-        <Label x:Name="label3_Copy2" Content="Wynik" HorizontalAlignment="Left" Margin="172,439,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="PokerTestTextBox" HorizontalAlignment="Left" Height="23" Margin="172,462,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="557" Margin="10,2,0,0" VerticalAlignment="Top" Width="772">
+            <TabItem Header="Testy">
+                <Grid Background="#FFE5E5E5" Margin="0,2,0,-2">
+                    <Button x:Name="LoadFileButton" Content="Wczytaj plik" HorizontalAlignment="Left" Margin="9,58,0,0" VerticalAlignment="Top" Width="110" Click="LoadFileButton_Click"/>
+                    <TextBox x:Name="KeyTextBox" HorizontalAlignment="Left" Height="222" Margin="9,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="772" IsEnabled="False"/>
+                    <Label x:Name="label" Content="Wybierz plik dla którego chcesz przeprowadzić testy (min. 20 000 znaków)" HorizontalAlignment="Left" Margin="9,32,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="label1" Content="Wczytany klucz" HorizontalAlignment="Left" Margin="9,78,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="OneBitTestButton" Content="Wykonaj" HorizontalAlignment="Left" Margin="9,360,0,0" VerticalAlignment="Top" Width="74" Click="OneBitTestButton_Click"/>
+                    <Label x:Name="label2" Content="Test pojedyńczych bitów" HorizontalAlignment="Left" Margin="9,334,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="OneBitTestTextBox" HorizontalAlignment="Left" Height="23" Margin="171,357,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+                    <Label x:Name="label3" Content="Wynik" HorizontalAlignment="Left" Margin="171,334,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="SerieTestButton" Content="Wykonaj" HorizontalAlignment="Left" Margin="9,403,0,0" VerticalAlignment="Top" Width="75" Click="SerieTestButton_Click"/>
+                    <Label x:Name="label2_Copy" Content="Test serii" HorizontalAlignment="Left" Margin="9,377,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="label3_Copy" Content="Wynik" HorizontalAlignment="Left" Margin="171,377,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="SerieTestTextBox" HorizontalAlignment="Left" Height="23" Margin="171,400,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+                    <Label x:Name="label2_Copy1" Content="Test długiej serii" HorizontalAlignment="Left" Margin="9,423,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="LongSerieButton" Content="Wykonaj" HorizontalAlignment="Left" Margin="9,449,0,0" VerticalAlignment="Top" Width="75" Click="LongSerieButton_Click"/>
+                    <Label x:Name="label3_Copy1" Content="Wynik" HorizontalAlignment="Left" Margin="171,423,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="LongSerieTestTextBox" HorizontalAlignment="Left" Height="23" Margin="171,446,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+                    <Label x:Name="label2_Copy2" Content="Test pokerowy" HorizontalAlignment="Left" Margin="9,469,0,0" VerticalAlignment="Top"/>
+                    <Button x:Name="PokerTestButton" Content="Wykonaj" HorizontalAlignment="Left" Margin="9,495,0,0" VerticalAlignment="Top" Width="75" Click="PokerTestButton_Click"/>
+                    <Label x:Name="label3_Copy2" Content="Wynik" HorizontalAlignment="Left" Margin="171,469,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="PokerTestTextBox" HorizontalAlignment="Left" Height="23" Margin="171,492,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Pomoc">
+                <Grid Background="#FFE5E5E5">
+                    <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="509" Margin="10,10,0,0" TextWrapping="Wrap" Text="Program przeprowadza testy FIPS dla ciągów 1 lub 0 o długości 20 000 znaków&#xD;&#xA;&#xD;&#xA;Test pojedynczych bitów&#xD;&#xA;&#x9;Sprawdzenie czy liczba jedynek mieści się w przedziale (9725-10275)&#xD;&#xA;Test serii&#xD;&#xA;&#x9;Zliczane są dłogości podciągów o takiej samej liczbie 0 lub 1. Wynik pozytywny otrzymujemy gdy liczba serii o długości od 1 do 5 mieści się w przedziałach:&#xD;&#xA;(Liczba jedynek - Przedział liczbowy)&#xD;&#xA;&#x9;1 &#x9;&#x9;- 2315-2685&#xD;&#xA;&#x9;2 &#x9;&#x9;- 1114-1386&#xD;&#xA;&#x9;3 &#x9;&#x9;- 527-123&#xD;&#xA;&#x9;4 &#x9;&#x9;- 240-384&#xD;&#xA;&#x9;5 &#x9;&#x9;- 103-209&#xD;&#xA;&#x9;6 lub więcej &#x9;- 103-209&#xD;&#xA;Test długiej serii&#xD;&#xA;&#x9;Sprawdzenie czy nie ma serii 26 lub więcej takich samych znaków&#xD;&#xA;Test pokerowy&#xD;&#xA;&#x9;Klucz dzielony jest na 5000 segmentów 4-bitowych i zliczana jest liczba wystąpień wszystkich 16 możliwych 4-bitowych wartości&#xD;&#xA;Następnie wyliczany jest X = 16/5000 * (suma zliczeń możliwości)^2 -5000&#xD;&#xA;Jeżeli 2,16&lt;X&lt;46,17 to wynik jest pozytywny&#xD;&#xA;&#xD;&#xA;Autor Emilian Ossowski" VerticalAlignment="Top" Width="746"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
 
     </Grid>
 </Window>

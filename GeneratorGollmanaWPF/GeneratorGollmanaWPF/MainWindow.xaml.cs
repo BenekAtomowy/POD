@@ -217,7 +217,7 @@ namespace GeneratorGollmanaWPF
                 {
                     key = key + cascade(registers);
                 }
-                PrintKeyTextBox.Text = key;
+               // PrintKeyTextBox.Text = key;
 
             }
         }
