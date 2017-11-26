@@ -240,7 +240,7 @@ namespace GeneratorGollmanaWPF
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            if (Convert.ToInt64(KeyLengthTextBox.Text) > 1000000 || Convert.ToInt64(KeyLengthTextBox.Text) < 1 || KeyLengthTextBox.Text == "") MessageBox.Show("Przekroczony zakres. Podaj liczbę z zakresu 1-1 000 000");
+            if (Convert.ToInt64(KeyLengthTextBox.Text) > 1000010 || Convert.ToInt64(KeyLengthTextBox.Text) < 1 || KeyLengthTextBox.Text == "") MessageBox.Show("Przekroczony zakres. Podaj liczbę z zakresu 1-1 000 000");
             else if (KeyLengthTextBox.Text.Count() == 0) { MessageBox.Show("Podaj ilość znaków"); }
             else if (registers == null) MessageBox.Show("Najpierw wygeneruj rejestry!");
             else
@@ -250,7 +250,7 @@ namespace GeneratorGollmanaWPF
                 {
                     key = key + rnd.Next(0, 2);
                 }
-                PrintKeyTextBox.Text = key;
+               // PrintKeyTextBox.Text = key;
             }
         }
 
