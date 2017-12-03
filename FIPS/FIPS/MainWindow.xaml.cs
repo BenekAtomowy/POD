@@ -84,6 +84,7 @@ namespace FIPS
             }
             if (wynik < 10275 && wynik > 9725) OneBitTestTextBox.Text = "Pozytywny";
             else OneBitTestTextBox.Text = "Negatywny";
+            OneBitTestDetails.Text = wynik.ToString();
         }
 
         private void SerieTestButton_Click(object sender, RoutedEventArgs e)
@@ -119,6 +120,8 @@ namespace FIPS
                 SerieTestTextBox.Text = "Pozytywny";
             }
             else SerieTestTextBox.Text = "Negatywny";
+
+            SerieTestDetails.Text = serie[0].ToString() + ", " + serie[1].ToString() + ", " + serie[2].ToString() + ", " + serie[3].ToString() + ", " + serie[4].ToString() + ", " + serie[5].ToString();
         }
 
         private void LongSerieButton_Click(object sender, RoutedEventArgs e)
@@ -149,6 +152,8 @@ namespace FIPS
             if (maxj >= 26 || maxz >= 26)
                 LongSerieTestTextBox.Text = "Negatywny";
             else LongSerieTestTextBox.Text = "Pozytywny";
+
+            LongSerieDetails.Text = "Liczba jedynek: " + maxj + " Liczba zer: " + maxz; 
         }
 
         private void PokerTestButton_Click(object sender, RoutedEventArgs e)
@@ -180,6 +185,11 @@ namespace FIPS
             if(x>2.16&&x<46.17)
             PokerTestTextBox.Text = "Pozytywny";
             else PokerTestTextBox.Text = "Negatywny";
+
+            PokerTestDetails.Text = results[0].ToString() + ", "+ results[1].ToString() + ", " + results[2].ToString() + ", " +
+                results[3].ToString() + ", " + results[4].ToString() + ", " + results[5].ToString() + ", " + results[6].ToString() + ", " + results[7].ToString() + ", " +
+                results[8].ToString() + ", " + results[9].ToString() + ", " + results[10].ToString() + ", " + results[11].ToString() + ", " + results[12].ToString() + ", " +
+                results[13].ToString() + ", " + results[14].ToString() + ", " + results[15].ToString() + " X = " + x; 
 
         }
 

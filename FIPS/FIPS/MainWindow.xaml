@@ -30,6 +30,14 @@
                     <Button x:Name="PokerTestButton" Content="Wykonaj" HorizontalAlignment="Left" Margin="0,471,0,0" VerticalAlignment="Top" Width="75" Click="PokerTestButton_Click"/>
                     <Label x:Name="label3_Copy2" Content="Wynik" HorizontalAlignment="Left" Margin="162,445,0,0" VerticalAlignment="Top"/>
                     <TextBox x:Name="PokerTestTextBox" HorizontalAlignment="Left" Height="23" Margin="162,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+                    <TextBox x:Name="OneBitTestDetails" HorizontalAlignment="Left" Height="23" Margin="330,333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="376" IsEnabled="False"/>
+                    <TextBox x:Name="SerieTestDetails" HorizontalAlignment="Left" Height="23" Margin="330,376,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="376" IsEnabled="False"/>
+                    <TextBox x:Name="LongSerieDetails" HorizontalAlignment="Left" Height="23" Margin="330,422,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="376" IsEnabled="False"/>
+                    <TextBox x:Name="PokerTestDetails" HorizontalAlignment="Left" Height="51" Margin="330,468,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="376" IsEnabled="False"/>
+                    <Label x:Name="label4" Content="Szczegóły" HorizontalAlignment="Left" Margin="330,310,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="label4_Copy" Content="Szczegóły" HorizontalAlignment="Left" Margin="330,353,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="label4_Copy1" Content="Szczegóły" HorizontalAlignment="Left" Margin="330,399,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="label4_Copy2" Content="Szczegóły" HorizontalAlignment="Left" Margin="330,445,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Pomoc">
