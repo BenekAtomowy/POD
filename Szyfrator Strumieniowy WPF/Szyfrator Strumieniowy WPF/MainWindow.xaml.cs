@@ -252,12 +252,22 @@ namespace Szyfrator_Strumieniowy_WPF
             }
             else MessageBox.Show("Błąd!");
         }
+        public String generateStringByteText()
+        {
+            String saveTextByte = "";
+            for (int i = 0; i < encryptedTextBin.Length; i++)
+            {
+                saveTextByte = saveTextByte + encryptedTextBin[i];
+            }
+            return saveTextByte;
+        }
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            String saveTextByte = generateStringByteText();
             
             
-            System.IO.File.WriteAllText(@"C:\Users\Public\Documents\WriteText.txt", encryptedText);
+            System.IO.File.WriteAllText(@"C:\Users\Public\Documents\WriteText.txt", saveTextByte);
         }
     }
 }
