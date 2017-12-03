@@ -164,6 +164,7 @@ namespace Szyfrator_Strumieniowy_WPF
         String[] alphabetBin;
         String[] keyBin;
         String decryptedText;
+        String[] encryptedTextBin;
 
 
         private void readKeyButton_Click(object sender, RoutedEventArgs e)
@@ -216,7 +217,7 @@ namespace Szyfrator_Strumieniowy_WPF
         {
            
                 String[] textByte = generateTextByte(TextBox.Text);
-                String[] encryptedTextBin = encrypt(textByte, keyBin);
+                encryptedTextBin = encrypt(textByte, keyBin);
                 encryptedText = findLetters(encryptedTextBin, alphabetBin, alphabet);
                 EncryptedTextBox.Text = encryptedText;
                 EncryptedTextBox_Copy.Text = encryptedText;
@@ -254,6 +255,8 @@ namespace Szyfrator_Strumieniowy_WPF
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
+            
+            
             System.IO.File.WriteAllText(@"C:\Users\Public\Documents\WriteText.txt", encryptedText);
         }
     }
