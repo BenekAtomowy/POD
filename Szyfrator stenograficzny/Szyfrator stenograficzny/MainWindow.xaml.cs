@@ -26,16 +26,17 @@ namespace Szyfrator_stenograficzny
         public static String[] generateTextByte(String text)
         {
             int[] textInt = new int[text.Length];
-            String[] textByte = new String[text.Length];
+            String[] textByte = new String[text.Length+1];
             for (int i = 0; i < text.Length; i++)
             {
                 textInt[i] = Convert.ToInt32(text[i]);
                 textByte[i] = Convert.ToString(text[i], 2).PadLeft(7,'0');
                 
             }
+            textByte[textByte.Length - 1] = "00000011";
             return textByte;
         }
-        public static int[] encrpyt (int[] pixelsTab, String[] textByte)
+        public static int[] encrpyt (int[] pixelsTab, String textByte)
         {
           
             String[] pixelsByte = new String[pixelsTab.Length];
@@ -48,7 +49,7 @@ namespace Szyfrator_stenograficzny
 
                     pixelsByte[i] = Convert.ToString(pixelsTab[i], 2).PadLeft(7,'0');
                     pixelsByte[i] = pixelsByte[i].Remove(pixelsByte[i].Length - 1);
-                    pixelsByte[i] = pixelsByte[i].Insert(pixelsByte[i].Length - 1, textByte[j][i].ToString());
+                    pixelsByte[i] = pixelsByte[i].Insert(pixelsByte[i].Length, textByte[i].ToString());
                     
                     pixelsInt[i] = Convert.ToInt32(pixelsByte[i],2);
                     pixelsInt[i] = pixelsInt[i] ;
@@ -133,6 +134,7 @@ namespace Szyfrator_stenograficzny
                 String[] textByte = generateTextByte(text);
                 
                 
+                
                 encryptedBitmap = bitmapImage;
 
                 int licznik = 0;
@@ -157,7 +159,7 @@ namespace Szyfrator_stenograficzny
                                 pixelsTab[5] = bitmapImage.GetPixel(x + 1, y).B;
                                 pixelsTab[6] = bitmapImage.GetPixel(x + 2, y).R;
                               
-                                pixelsTab = encrpyt(pixelsTab, textByte);
+                                pixelsTab = encrpyt(pixelsTab, textByte[licznik]);
 
                                 encryptedBitmap.SetPixel(x, y, System.Drawing.Color.FromArgb(255, pixelsTab[0], pixelsTab[1], pixelsTab[2]));
                                 encryptedBitmap.SetPixel(x + 1, y, System.Drawing.Color.FromArgb(255, pixelsTab[3], pixelsTab[4], pixelsTab[5]));
@@ -205,7 +207,7 @@ namespace Szyfrator_stenograficzny
             encryptedBitmapImage = encryptedBitmap;
             String text = "";
             int licznik = 0;
-            String[] textByte = new String[10];
+            String[] textByte = new String[textBox.Text.Length];
             
             for (int y = 1; y < encryptedBitmapImage.Height; y++)
             {
@@ -214,7 +216,7 @@ namespace Szyfrator_stenograficzny
                 {
                     for (int x = 1; x < encryptedBitmapImage.Width - 3; x = x + 3)
                     {
-                        if (licznik >= textByte.Length) break;
+                        if (licznik >= textByte.Length || textByte[licznik] == "00000011") break;
                         else
                         {
                             int[] pixelsTab = new int[7];
