@@ -24,7 +24,9 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Pomoc">
-                <Grid Background="#FFE5E5E5"/>
+                <Grid Background="#FFE5E5E5">
+                    <TextBox HorizontalAlignment="Left" Height="521" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="766" IsEnabled="False" Text="Program do kryptografii wizualnej&#xD;&#xA;&#xD;&#xA;Implementacja algorytmu szyfrowania wizualnego. Tworzone są 2 obrazy, na podstawie obrazu wyjściowego, które po złożeniu z przezroczystością dają obraz wejściowy.&#xD;&#xA;Implementacja ograniczona jest do obrazów czarno-białych, bez korekcji rozciągnięcia i szumów.&#xD;&#xA;Możliwe jest zaszyfrowanie obrazu jak i odszyfrowanie obrazu z dwóch tzw udziałów.&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;Autor: Emilian Ossowski"/>
+                </Grid>
             </TabItem>
         </TabControl>
     </Grid>
