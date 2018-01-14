@@ -126,7 +126,7 @@ namespace SzyfrowanieRSA
             {
                 decryptedText[i] =(BigInteger.Pow(encryptedAscii[i], d)) % n;
             }
-
+            DecryptedTextbox.Text = text;
 
 
         }
