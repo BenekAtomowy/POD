@@ -119,14 +119,19 @@ namespace SzyfrowanieRSA
                     letter = "";
                 }
             }
+            encryptedList.Add(new BigInteger(Int32.Parse(letter)));
             BigInteger[] encryptedAscii = new BigInteger[encryptedList.Count];
-            BigInteger[] decryptedText = new BigInteger[encryptedAscii.Length];
+            BigInteger[] decryptedAscii = new BigInteger[encryptedAscii.Length];
+            String[] decryptedAsciiInt = new String[decryptedAscii.Length];
+            String deText = "";
             encryptedAscii = encryptedList.ToArray();
             for (int i = 0; i<encryptedAscii.Length; i++)
             {
-                decryptedText[i] =(BigInteger.Pow(encryptedAscii[i], d)) % n;
+                decryptedAscii[i] =(BigInteger.Pow(encryptedAscii[i], d)) % n;
+                decryptedAsciiInt[i] = decryptedAscii[i].ToString();
+                deText = deText + Convert.ToChar(Int32.Parse( decryptedAsciiInt[i]));
             }
-            DecryptedTextbox.Text = text;
+            DecryptedTextbox.Text = deText;
 
 
         }

@@ -34,10 +34,13 @@
                     <Button x:Name="DecryptButton" Content="Deszyfruj" HorizontalAlignment="Left" Margin="349,365,0,0" VerticalAlignment="Top" Width="88" Height="41" Click="DecryptButton_Click"/>
                     <TextBox x:Name="DecryptedTextbox" HorizontalAlignment="Left" Height="75" Margin="458,349,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="318"/>
                     <Label Content="Zdeszyfrowany tekst" HorizontalAlignment="Left" Margin="458,323,0,0" VerticalAlignment="Top"/>
+                    <Label Content="P i Q mogą być tylko i wyłącznie liczbami pierwszymi" HorizontalAlignment="Left" Margin="209,35,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
-            <TabItem Header="TabItem">
-                <Grid Background="#FFE5E5E5"/>
+            <TabItem Header="Pomoc">
+                <Grid Background="#FFE5E5E5">
+                    <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="521" Width="766"><Run Text="Implementacja prostego szyfrowania RSA"/><LineBreak/><Run/><LineBreak/><Run Text="W pierwszej części programu "/><Run Text="podajemy P i Q, które są liczbami pierwszymi."/><LineBreak/><Run Text="N"/><Run Text="astępnie na ich podstawie "/><Run Text="generowane jest "/><Run Text="N"/><Run Text=" i "/><Run Text="Phi, oraz na końcu E i "/><Run Text="D."/><LineBreak/><Run Text="N = P · Q"/><LineBreak/><Run Text="Phi = (P – 1)(Q – 1)"/><LineBreak/><Run Text="E = liczba względnie pierwszą z Phi czyli taką, która jest liczbą pierwszą i dla której największy wspólny dzielnik z Phi wynosi 1"/><LineBreak/><Run Text="D w taki sposób, aby spełniona była zależność: iloczyn E i D przystaje do 1 modulo Phi. Co oznacza, że Phi dzieli wyrażenia E · D – 1"/><LineBreak/><Run/><LineBreak/><Run Text="W kolejnej części wpisujemy tekst do zaszyfrowania, obliczane jest dla każdego znaku działanie "/><LineBreak/><Run Text="c = m^E mod N&#x9;&#x9;, gdzie c oznacza wiadomość zaszyfrowaną, a m wiadomość jawną."/><LineBreak/><Run Text="Zaszyfrowany tekst jest widoczny w formie liczb, rozdzielonych przecinkiem."/><LineBreak/><Run/><LineBreak/><Run Text="Deszyfracja polega na przepuszczeniu każdej liczby przez działanie"/><LineBreak/><Run Text="m = c^D mod N"/><Run Text="&#x9;&#x9;, gdzie c oznacza wiadomość zaszyfrowaną, a m wiadomość jawną."/><LineBreak/><Run Text=""/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run/><LineBreak/><Run Text="Autor: Emilian Ossowski"/></TextBlock>
+                </Grid>
             </TabItem>
         </TabControl>
     </Grid>
